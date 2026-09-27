@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "battery", "pulseaudio", "tray"],
+    "custom/menu": {
+        "format": "g", // Unicode "g" for Gentoo; or use "" for FontAwesome
+        "on-click": "hyprlauncher", // Launches hyprlauncher
+        "tooltip": "Open Application Menu"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 3 // Shows 5 workspaces by default
+        }
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 1
+    },
+    "memory": {
+        "format": " {}%",
+        "interval": 1
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+    "pipewire": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}
